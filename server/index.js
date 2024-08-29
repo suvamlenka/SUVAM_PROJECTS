@@ -32,9 +32,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    limits: { fileSize: 1 * 1024 * 1024 }, // Limit file size to 1MB
+    limits: { fileSize: 1 * 1024 * 1024 }, 
     fileFilter: (req, file, cb) => {
-        const fileTypes = /jpeg|jpg|png/; // Allowed file types
+        const fileTypes = /jpeg|jpg|png|pdf/; 
         const extname = fileTypes.test(file.mimetype);
         const mimetype = fileTypes.test(file.originalname.split('.').pop().toLowerCase());
 
@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
 // Route handlers
 app.use("/auth", authRoutes);
 app.use("/notes", noteRoutes);
-app.use("/files", express.static("uploads")); // Serve uploaded files
+app.use("/files", express.static("uploads")); 
 
 // Start server
 app.listen(PORT, () => {
