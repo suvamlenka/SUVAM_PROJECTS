@@ -36,7 +36,7 @@ const SearchBar = () => {
   }
 
   const showPDF = async (files) => {
-    window.open(`http://localhost:6969/files/${files}`, "_blank", "noreferrer");
+    window.open(`https://find-my-notes.onrender.com/files/${files}`, "_blank", "noreferrer");
   };
 
   return (
