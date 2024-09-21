@@ -32,7 +32,7 @@ const Signup = () => {
 
     try {
       const result = await axios.post(
-        "http://localhost:6969/auth/signup",
+        "https://find-my-notes.onrender.com/auth/signup",
         formData,
         {
           headers: {
