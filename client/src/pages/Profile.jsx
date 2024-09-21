@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect(() => {
     const getUserFiles = async () => {
       try {
-        const result = await axios.get(`http://localhost:6969/notes/getFiles/${userId}`);
+        const result = await axios.get(`https://find-my-notes.onrender.com/notes/getFiles/${userId}`);
         console.log(result.data);
         setUserFiles(result.data.data);
       } catch (error) {
